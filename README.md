@@ -81,4 +81,4 @@ Enter the container and launch the Gazebo world:
   ros2 run swarm_control swarm_follower --ros-args -r __ns:=/follower_2 -p use_sim_time:=true &
   ```
 
-*Created by [codeIshan]. Happy Hacking!*
+*Created by @codeIshan. Happy Hacking!*
