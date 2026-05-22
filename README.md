@@ -1,8 +1,3 @@
-
-# Project Title
-
-A brief description of what this project does and who it's for
-
 # TurtleBot3 Multi-Robot Swarm Simulation
 
 This project demonstrates a multi-robot swarm behavior using **ROS 2 Humble** and **Gazebo**. One "Master" robot is controlled via keyboard, while two "Follower" robots autonomously maintain a tethered distance from the master using odometry-based proportional control.
