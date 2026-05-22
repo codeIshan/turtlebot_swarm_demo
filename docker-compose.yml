@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  swarm_sim:
+    build: .
+    container_name: turtlebot_swarm
+    privileged: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - GAZEBO_MODEL_DATABASE_URI=""
+      - GAZEBO_MODEL_PATH=/root/swarm_ws/gazebo_models
+    volumes:
+      # This gives Docker access to your screen
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      # This links your host folder to the container's folder
+      - .:/root/swarm_ws
+    devices:
+      # This passes your Intel graphics card into Docker for Gazebo
+      - /dev/dri:/dev/dri
+    network_mode: host
+    command: /bin/bash
+    tty: true
+    stdin_open: true
